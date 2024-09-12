@@ -79,34 +79,82 @@ Morgan should add random text to the file.
 
 - `git branch add-book-reviews`
 
-![git add](./images/git-add.jpg)
+![git add](./images/git-morgan-branch.jpg)
 
 - I switch to the "add-book-reviews" branch using the below command, and created a "book_reviews.html file, and added content in it.
 
 - `git checkout add-book-reviews`
 
-![git add](./images/git-add.jpg)
+![git add](./images/git-switch-morgan-branch.jpg)
 
 #### Stage
 - `git status`
 - `git add .`
 
-![git add](./images/git-add.jpg)
-![git add](./images/git-add-status.jpg)
+![git add](./images/git-add-morgan.jpg)
 
 #### Commit
 - `git status`
 - `git commit -m "add book reviews section."`
 
-![git add](./images/commit-actual-website.jpg)
-![git add](./images/commit-status.jpg)
+![git status](./images/git-commit-morgan.jpg)
 
 #### push
 - `git status`
 - `git push origin main`
 
-![git add](./images/git-push.jpg)
-![git add](./images/git-push-status.jpg)
+![git push](./images/git-push-morgan.jpg)
+![git push](./images/git-push-status.jpg)
+
+- I raise the PR by clicking the "compare and pull request" button from my Github, and I add book reviews section and then, click on the green button to create pull request.
+
+- After check is completed and no error, I then merge the pull request, confirm merge, and delete branch.
+
+### Creating a branch for Jamie's"update events page"
+
+- In other for Jamie's to execute his asigned task, I will create a branch and call the branch "update-events" for him on the main branch, to enable him to add more content on "events.html".
+- He should Stage, commit and push changes with a message "events of the year 2024." and push the "events" branch to the Github.
+- I then raise a PR for Morgan's work, and merge his work to the main branch.
+
+#### Steps to achieve Jamie'ss Task
+- I will switch to the main, pull and then, create a branch for Jamie's to enable him add to the events, and I will call the "update-events" using this command below.
+
+- `git branch update-events`
+
+![git add](./images/git-morgan-branch.jpg)
+
+- I switch to the "add-book-reviews" branch using the below command, and created a "book_reviews.html file, and added content in it.
+
+- `git checkout add-book-reviews`
+
+![git add](./images/git-switch-morgan-branch.jpg)
+
+#### Stage
+- `git status`
+- `git add .`
+
+![git add](./images/git-add-morgan.jpg)
+
+#### Commit
+- `git status`
+- `git commit -m "add book reviews section."`
+
+![git status](./images/git-commit-morgan.jpg)
+
+#### push
+- `git status`
+- `git push origin main`
+
+![git push](./images/git-push-morgan.jpg)
+![git push](./images/git-push-status.jpg)
+
+- I raise the PR by clicking the "compare and pull request" button from my Github, and I add book reviews section and then, click on the green button to create pull request.
+
+- After check is completed and no error, I then merge the pull request, confirm merge, and delete branch.
+
+![git add](./images/pull-request-morgan.jpg)
+![git add](./images/merge-morgan.jpg)
+
 
 
 
