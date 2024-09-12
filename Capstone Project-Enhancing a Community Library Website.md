@@ -43,95 +43,72 @@ The curent and available sections are Home, About Us, Events, and Contact Us, an
 
 ![Clone Repository on Local Machine](./images/pages-file-created.jpg)
 
+#### Thirdly, I have to Stage, commit and push the changes I made directly to my main branch of my teams existing codes for the website. And I use the below commands in sequence to achieve it.
 
- `sudo apt install apache2`
+#### Stage
+- `git status`
+- `git add .`
 
- ![apache2 installation](./images/apache2-installation.jpg)
+![git add](./images/git-add.jpg)
+![git add](./images/git-add-status.jpg)
 
- ### Run apache2 package installation by running the command "sudo apt install apache2"
+#### Commit
+- `git status`
+- `git commit -m "git commit actual website"`
 
- `sudo apt install apache2`
+![git add](./images/commit-actual-website.jpg)
+![git add](./images/commit-status.jpg)
 
- ![apache2 installation](./images/apache2-status.jpg)
+#### push
+- `git status`
+- `git push origin main`
 
-### To receive any traffic in our Web Server, we need to open TCP port 80 which is the default port that web browsers use to access web pages on the Internet.
-### - Check the box in front of the EC2 instance, select security, and click on security group link, and click on edit inbound rule, add HTTP configuration inbound connection through protocol with default port 80 as shown below.
+![git add](./images/git-push.jpg)
+![git add](./images/git-push-status.jpg)
 
- ![HTTP port80](./images/HTTP-port-80.jpg)
+### Creating a branch for Morgan to "Add Book Reviews"
 
- ### To check if we can access it locally in our Ubuntu shell, we have to run the below command.
+- In other for Morgan to execute his asigned task, I will create a branch and call the branch "add-book-reviews for him on the main branch, and add a new file called "book_reviews.html"
+Morgan should add random text to the file.
+- He should Stage, commit and push changes with a message "Add book review sections." and push the "add-book-review" branch to the Github.
+- I then raise a PR for Morgan's work, and merge his work to the main branch.
 
- `curl http://localhost:80`, or `curl http://127.0.0.1:8`
+#### Steps to achieve Morgans Task
 
-![local host access](./images/localhost-access.jpg)
+- I create a branch for him and call it "add-book-reviews" using this command below.
 
-![local host access1](./images/local-host-access1.jpg)
+- `git branch add-book-reviews`
 
-### To test and confirm how our Apache HTTP server responds to requests from the Internet. I opened the Microsoft Edge web browser and ran the below http link through my url, and the web server is correctly installed and accessible through my firewall.
+![git add](./images/git-add.jpg)
 
-`http://3.84.6.47:80`
+- I switch to the "add-book-reviews" branch using the below command, and created a "book_reviews.html file, and added content in it.
 
-### - I also use the below command to retrive my AWS Web console public IP
+- `git checkout add-book-reviews`
 
-`curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+![git add](./images/git-add.jpg)
 
-![Apache HTTP server responds](./images/Apache-HTTP-server-responds.jpg)
+#### Stage
+- `git status`
+- `git add .`
 
-## STEP 2 — INSTALLING MYSQL
+![git add](./images/git-add.jpg)
+![git add](./images/git-add-status.jpg)
 
-### To help store and manage data for my Apache web Server, MYSQL database management system (DBMS) will be installed using the below command, and then confirm yes (y) for additional disk space of 242 M to be used.
+#### Commit
+- `git status`
+- `git commit -m "add book reviews section."`
 
-`sudo apt install mysql-server`
+![git add](./images/commit-actual-website.jpg)
+![git add](./images/commit-status.jpg)
 
-![Mysql installation](./images/Mysql-installation.jpg)
+#### push
+- `git status`
+- `git push origin main`
 
-![Mysql installation](./images/Mysql-installation1.jpg)
+![git add](./images/git-push.jpg)
+![git add](./images/git-push-status.jpg)
 
-### Starting the interactive script for the security script that comes pre-install with MySQL to remove some insecure default settings and lock down access to the database system
 
-### Before running the script I will set a password for the root user, by using mysql_native_password as default authentication method, and define the user’s password as PassWord.1.
-
-### Firstly, we run the below command and exit MySQL.
-
-`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
-
-![Alter User](./images/ALTER-USER.jpg)
-
-### Secondly, I will Start the interactive script by running the below command, and to respond to other questions, enter Y and hit the ENTER key at each prompt to change the root password, remove some anonymous users and the test database, disable remote root logins, and load these new rules so that MySQL immediately respects the changes I have made.
-
-`sudo mysql_secure_installation`
-
-![Mysql Secure](./images/mysql-secure.jpg)
-
-![Mysql Secure](./images/mysql-secure1.jpg)
-
-### To test if I am able to login to MySQL console, I run the below command, and exit MySQL console.
-
-`sudo mysql -p`
-
-![Mysql Login](./images/confirm-lmysql-ogin.jpg)
-
-## STEP 3 — INSTALLING PHP
-
-### To install PHP and the additional component of the php package, I will have to install php-mysql, PHP module that allows PHP to communicate with MySQL-based databases, and libapache2-mod-php is needed to enable Apache to handle PHP files.
-
-### The below command will be ran to Install the three (3) PHP pakages at the same time.
-
-`sudo apt install php libapache2-mod-php php-mysql`
-
-![PHP and 3 pakage Installation](./images/PHP-3-Installation.jpg)
-
-![PHP and 3 pakage Installation](./images/PHP-3-Installation1.jpg)
-
-### Confirm PHP version running
-
-### To confirm the PHP version running on the server, the below command is use.
-
-`php v`
-
-![confirm PHP version](./images/PHP%20Version.jpg)
-
-### I have install LAMP stack, and it is full operational.
 
 ### Use the link below to preview project-1 implementation.
 - [PROJECT 1: LAMP STACK IMPLEMENTATION](https://github.com/Tasbaba/Project-1/blob/main/project-1.md)
